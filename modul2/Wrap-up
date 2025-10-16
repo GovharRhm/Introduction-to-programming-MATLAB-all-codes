@@ -1,0 +1,7 @@
+% Find average speeds of two record holders: Usain Bolt and Kenyan Ellud Kipchoge
+usain_time_hour=9.58/3600
+usain_km=0.1
+hundred=usain_km/usain_km_hour
+kenyan_distance_km=42.195
+kenyan_time_hour=2+1/60+39/3600
+marathon=kenyan_distance_km/kenyan_time_hour
