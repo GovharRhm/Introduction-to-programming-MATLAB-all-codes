@@ -1,1 +1,4 @@
+% Create a vector of all positive odd and even integers smaller than 100
 
+odds=1:2:100
+evens=100:-2:2
