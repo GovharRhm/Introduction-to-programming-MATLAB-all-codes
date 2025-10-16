@@ -1,5 +1,1 @@
-initial_debt=1000;
-rate=0.10;
-year=2;
-all_debt=initial_debt*(1+rate)^year;
-debt=all_debt;
+
