@@ -1,0 +1,12 @@
+% Function to find the a row vector that contains difference between the maximum and minimum values in every row, maximum difference mmm
+
+function [mmr, mmm]=minimax(M)
+
+min_row=min(M,[],2); %1 means rows, 2 means columns, [] is sub-matrix
+max_row=max(M,[],2);
+mmr=abs(max_row-min_row)'; % symbol ' changes the dimension
+min_num=min(M(:));
+max_num=max(M(:));
+mmm=abs(max_num-min_num)';
+
+end
