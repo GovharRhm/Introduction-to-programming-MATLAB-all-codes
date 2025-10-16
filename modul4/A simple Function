@@ -1,0 +1,5 @@
+% Area of a triangle
+
+function A=tri_area(b,h)
+A=b*h/2;
+end
