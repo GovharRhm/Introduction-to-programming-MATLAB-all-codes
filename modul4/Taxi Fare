@@ -7,3 +7,5 @@ distance=5+2*(ceil(d)-1);
 all=time+distance;
 
 end
+
+fare=taxi_fare(3.5,2.25)
