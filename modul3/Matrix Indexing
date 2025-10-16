@@ -1,0 +1,6 @@
+% Matrix A is given, assign second column of A to v
+% Change all elements in last row of A to 0
+
+A = [1:5; 6:10; 11:15; 16:20];
+v=A(1:end,2)
+A(end,1:end)=0
