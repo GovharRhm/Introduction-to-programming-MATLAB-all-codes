@@ -1,0 +1,7 @@
+% Create a row vector and a column vector that contains 1s as A vector has
+% Matrix multiplication
+
+A = [1:5; 6:10; 11:15; 16:20];
+vector_row(1,1:4)=1
+vector_column(1:5,1)=1
+result=vector_row*A*vector_column
