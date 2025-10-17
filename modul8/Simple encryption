@@ -1,0 +1,11 @@
+% Function to encrypt a message with Caesar encryption
+
+function coded=caesar(text,shift)
+
+ascii_vector=double(text);
+shifted_relative=ascii_vector-32+shift;
+wrapped=mod(shifted_relative,95);
+coded_ascii=wrapped+32;
+coded=char(coded_ascii);
+
+end
