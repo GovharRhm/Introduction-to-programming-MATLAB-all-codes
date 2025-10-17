@@ -1,0 +1,19 @@
+% Function to count the number of a character in a text file
+% Upload simple.txt and Frankestein-by-Shelley.txt files in MATLAB.
+
+function charnum=char_counter(fname,character)
+
+if ~ischar(character)||length(character)~=1
+    charnum=-1;        % -1 identifies error
+    return;
+end
+
+fileid=fopen(fname,'r');  % 'r' is reading mode
+if fileid==-1
+    charnum=-1;
+    return;
+end
+content=fread(fileid,'*uint8');   % It reads file as 8-bit integers
+fclose(fileid);
+charnum=sum(content==double(character));  % double() converts a character into a ASCII integer 
+end
