@@ -1,0 +1,9 @@
+% Function to determine if the person is younger than the age limit
+
+function too_young=underage(age,limit)
+
+if nargin==1    % nargin shows the number of inputs
+    limit=21;
+    end
+too_young=age<limit  
+end
