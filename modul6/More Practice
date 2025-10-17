@@ -1,0 +1,9 @@
+% Function to determine if applicant's average score is at least 92 and both individual grades are higher than 88 or not
+
+function admit=eligible(v,q)
+avrg=(v+q)/2;
+if avrg>=92 && v>88 && q>88
+    admit=true;
+else
+    admit=false;
+end
