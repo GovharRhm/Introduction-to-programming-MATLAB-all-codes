@@ -68,4 +68,4 @@
 
 ## 🎓 Certificate
 
-[Sertifikatın Linki Buradadır](https://drive.google.com/file/d/1Md05-anTZtwFIzb-qVbRjM13aDkVHYUA/view?usp=sharing)
+https://drive.google.com/file/d/1Md05-anTZtwFIzb-qVbRjM13aDkVHYUA/view?usp=sharing
