@@ -1,0 +1,26 @@
+% Upload Distances.xlsx file to run this code in MATLAB.
+% Function to get the distance between two cities in Excel file Distances.xlsx
+
+function distance=get_distance(city1,city2)
+
+persistent data;   % persistent keeps variable in memory
+
+if isempty(data)
+    try
+        [~,~,data]=xlsread('Distances.xlsx');    % ~ helps to ignore the undesired part
+    catch
+        distance=-1;  
+        error('Distance.xlsx file does not exist');
+        return;
+    end
+end
+cities=data(2:end,1);     
+row_index=find(strcmp(cities,city1),1);   % If there exists city1 and city1 in cities list, it finds the index of that city
+col_index=find(strcmp(cities,city2),1);   % Here 1 is boolean 
+
+if isempty(row_index)||isempty(col_index)
+    distance=-1;
+    return;
+end
+distance=data{row_index+1,col_index+1};  % In file it starts in 2nd row 2nd column
+end
