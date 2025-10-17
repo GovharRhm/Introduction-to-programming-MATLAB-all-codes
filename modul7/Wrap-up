@@ -1,0 +1,27 @@
+% Function to define the consecutive integers with their greatest sum after integer n in vector
+
+function [summa, index]=max_sum(v,n)
+
+[rows, cols]=size(v)   % size() returns a vector, not an integer
+summ=[];
+
+if cols<n
+    summa=0;
+    index=-1;
+    return;
+end
+
+current_sum=sum(v(1:n));
+max_summa=1;
+
+for i=2:(length(v)-n+1)
+    current_sum=current_sum-v(i-1)+v(i+n-1);
+    if current_sum>max_summa
+        max_summa=current_sum;
+        max_index=i;
+    end
+end
+
+summa=max_summa;
+index=max_index;
+end
