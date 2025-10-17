@@ -1,0 +1,19 @@
+% Function to calculate the sum of half-matrix elements
+
+function summa=halfsum(A)
+
+total=0;
+[rows,cols]=size(A);
+n=min(rows,cols);
+d=zeros(n,1);
+
+for i=1:rows
+    for j=1:cols
+        if j>=i
+            d(i)=A(i,j);
+            total=total+d(i);
+        end
+    end
+end
+summa=total;
+end
