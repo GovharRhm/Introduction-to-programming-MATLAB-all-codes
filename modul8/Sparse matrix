@@ -1,0 +1,18 @@
+% Sparse matrix consists approximately 95% with 0s. This function helps to change a matrix into a sparse matrix. Here is an example:
+% cellvec={[1 2],0,[ 1 1 4],[2 3 -1]}
+
+function matrix=sparse2matrix(cellvec)
+
+rows=cellvec{1}(1);   % Indexing in MATLAB starts with 1 
+cols=cellvec{1}(2);   % {1}(2) indicates index 1 of cellvec and index 2 of element in index 1
+default_num=cellvec{2}; 
+natrix=default_num*ones(rows,cols);  
+
+for i=3:length(cellvec)
+    element=cellvec{i};
+    row_index=element(1);
+    col_index=element(2);
+    value=element(3);
+    matrix(row_index,col_index)=value;  % This changes elements of initial matrix
+end
+end
