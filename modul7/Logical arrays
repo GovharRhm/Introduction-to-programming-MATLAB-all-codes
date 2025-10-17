@@ -1,0 +1,7 @@
+% Function to find the number of days with temperature that lower than 32F
+
+function numfreeze=freezing(A)
+
+numfreeze=sum(A<32);
+
+end
